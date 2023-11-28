@@ -1,5 +1,13 @@
 <template>
   <main>
-    <h1>hola</h1>
+    <HeaderHtml />
+    <BodyHome />
+    <FooterComponent />
   </main>
 </template>
+
+<script setup>
+import BodyHome from "../components/HomeView/BodyHome.vue"
+import HeaderHtml from "../components/Header.vue"
+import FooterComponent from "../components/Footer.vue"
+</script>

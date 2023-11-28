@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { RouterView } from 'vue-router'
+import { RouterView } from "vue-router"
 
 export default {
   components: { RouterView },
@@ -20,4 +20,6 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss">
+@import "@/assets/styles/main.scss";
+</style>
