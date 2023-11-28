@@ -2,7 +2,7 @@
   <section id="benefits" class="section key-feature relative">
     <img
       class="absolute left-0 top-0 -z-[1] -translate-y-1/2"
-      src="images/icons/feature-shape.svg"
+      src="/images/icons/feature-shape.svg"
       alt=""
     />
     <div class="container">

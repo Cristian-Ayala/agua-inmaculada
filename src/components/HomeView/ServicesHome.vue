@@ -5,13 +5,13 @@
         <div class="lg:col-7 lg:order-2">
           <div class="tab-content flex justify-center" data-tab-content>
             <div class="tab-content-panel active text-center" data-tab-panel="0">
-              <img class="w-full object-contain max-w-sm" src="images/mapa-agua_inmaculada.webp" />
+              <img class="w-full object-contain max-w-sm" src="/images/mapa-agua_inmaculada.webp" />
             </div>
             <div class="tab-content-panel" data-tab-panel="1">
-              <img class="w-full object-contain" src="images/people.webp" />
+              <img class="w-full object-contain" src="/images/people.webp" />
             </div>
             <div class="tab-content-panel" data-tab-panel="2">
-              <img class="w-full object-contain" src="images/water4all.webp" />
+              <img class="w-full object-contain" src="/images/water4all.webp" />
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@
       <div id="mision" class="row gx-5 mt-12 items-center lg:mt-0">
         <div class="lg:col-7">
           <div class="relative rounded-2xl overflow-hidden">
-            <img class="w-full object-contain" src="images/people.webp" />
+            <img class="w-full object-contain" src="/images/people.webp" />
           </div>
         </div>
         <div class="mt-6 lg:col-5 lg:mt-0">
@@ -54,7 +54,7 @@
         <div class="lg:col-7 lg:order-2">
           <div class="video pb-5 pr-9">
             <div class="video-thumbnail overflow-hidden rounded-2xl">
-              <img class="w-full object-contain" src="images/water4all.webp" alt="" />
+              <img class="w-full object-contain" src="/images/water4all.webp" alt="" />
             </div>
           </div>
         </div>

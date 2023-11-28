@@ -4,7 +4,7 @@
       <!-- logo -->
       <div class="order-0">
         <a href="index.html">
-          <img src="images/logo.webp" height="30" width="147" alt="logo" />
+          <img src="/images/logo.webp" height="30" width="147" alt="logo" />
         </a>
       </div>
       <!-- navbar toggler -->

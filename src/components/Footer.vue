@@ -4,7 +4,7 @@
       <div class="row gx-5 pb-10 pt-[52px]">
         <div class="col-12 mt-12 md:col-6 lg:col-3">
           <a href="#">
-            <img src="images/logo.webp" alt="" />
+            <img src="/images/logo.webp" alt="" />
           </a>
         </div>
         <div class="col-12 mt-12 md:col-6 lg:col-3">

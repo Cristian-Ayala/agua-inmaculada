@@ -14,7 +14,7 @@
         <div class="lg:col-6">
           <img
             class="w-full object-contain h-[25rem]"
-            src="images/water_glass-of-water.png"
+            src="/images/water_glass-of-water.png"
             height="100"
             alt=""
           />
@@ -23,7 +23,7 @@
     </div>
     <img
       class="banner-shape absolute -top-28 right-0 -z-[1] w-full max-w-[30%]"
-      src="images/banner-shape.svg"
+      src="/images/banner-shape.svg"
       alt="upper buble top rigth side"
     />
   </section>
