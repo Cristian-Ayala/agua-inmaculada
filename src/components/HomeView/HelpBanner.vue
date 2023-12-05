@@ -7,10 +7,16 @@
         <div class="lg:col-11">
           <div class="row">
             <div class="lg:col-7">
-              <h2 class="h1 text-white">
-                Estamos para ayudarte
-              </h2>
-              <a class="btn btn-white mt-8" href="#">Contactate con nosotros</a>
+              <h2 class="h1 text-white">Estamos para ayudarte</h2>
+              <router-link v-slot="{ href, navigate }" to="/contactanos" custom>
+                {{}}
+                <a
+                  :href="href"
+                  class="btn btn-white mt-8"
+                  @click.prevent="navigate()"
+                  >Contactate con nosotros</a
+                >
+              </router-link>
             </div>
             <div class="mt-8 lg:col-5 lg:mt-0">
               <p class="text-white">
@@ -31,13 +37,13 @@ export default {
   components: {},
   props: {},
   data() {
-    return {}
+    return {};
   },
   computed: {},
   watch: {},
   mounted() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped></style>

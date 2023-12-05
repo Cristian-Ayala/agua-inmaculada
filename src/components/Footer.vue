@@ -66,18 +66,21 @@
         <div class="col-12 mt-12 md:col-6 lg:col-3">
           <h6>Enlaces rápidos</h6>
           <ul>
-            <li>
-              <a href="#benefits">Beneficios</a>
-            </li>
-            <li>
-              <a href="#aboutUs">Acerca de nosotros</a>
-            </li>
-            <li>
-              <a href="#mision">Misión</a>
-            </li>
-            <li>
-              <a href="#vision">Visión</a>
-            </li>
+            <router-link v-slot="{ href, navigate }" to="/" custom>
+              <li>
+                <a :href="href" @click.prevent="navigate()">Inicio</a>
+              </li>
+            </router-link>
+            <router-link v-slot="{ href, navigate }" to="/#aboutUs" custom>
+              <li>
+                <a :href="href" @click.prevent="navigate()">Acerca de nosotros</a>
+              </li>
+            </router-link>
+            <router-link v-slot="{ href, navigate }" to="/productos" custom>
+              <li>
+                <a :href="href" @click.prevent="navigate()">Productos</a>
+              </li>
+            </router-link>
           </ul>
         </div>
         <div class="col-12 mt-12 md:col-6 lg:col-3">
@@ -96,13 +99,13 @@ export default {
   components: {},
   props: {},
   data() {
-    return {}
+    return {};
   },
   computed: {},
   watch: {},
   mounted() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped></style>

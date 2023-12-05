@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <component :is="$route.meta.layout || 'div'"> </component>
-  </div>
+  <h1>Blank View</h1>
 </template>
 
 <script>
 export default {
+  name: "BlankView",
   components: {},
   props: {},
   data() {
@@ -18,6 +17,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "@/assets/styles/main.scss";
-</style>
+<style scoped></style>

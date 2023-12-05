@@ -1,15 +1,24 @@
-import { createRouter, createWebHistory } from "vue-router"
-import HomeView from "../views/HomeView.vue"
+import { createRouter, createWebHistory } from "vue-router";
+import routes from "./routes";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: "/",
-      name: "home",
-      component: HomeView
-    }
-  ]
-})
+  routes,
+  linkActiveClass: "active-link",
+  linkExactActiveClass: "exact-active-link",
+});
 
-export default router
+router.onError((error, to) => {
+  if (
+    error.message.includes("Failed to fetch dynamically imported module") ||
+    error.message.includes("Importing a module script failed")
+  ) {
+    if (!to?.fullPath) {
+      window.location.reload();
+    } else {
+      window.location = to.fullPath;
+    }
+  }
+});
+
+export default router;

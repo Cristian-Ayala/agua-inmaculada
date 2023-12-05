@@ -3,9 +3,11 @@
     <nav class="navbar container">
       <!-- logo -->
       <div class="order-0">
-        <a href="index.html">
-          <img src="/images/logo.webp" height="30" width="147" alt="logo" />
-        </a>
+        <router-link v-slot="{ href, navigate }" to="/" custom>
+          <a :href="href" @click.prevent="navigate()">
+            <img src="/images/logo.webp" height="30" width="147" alt="logo" />
+          </a>
+        </router-link>
       </div>
       <!-- navbar toggler -->
       <input id="nav-toggle" type="checkbox" class="hidden" />
@@ -37,29 +39,73 @@
         id="nav-menu"
         class="navbar-nav order-2 hidden w-full flex-[0_0_100%] lg:order-1 lg:flex lg:w-auto lg:flex-auto lg:justify-center lg:space-x-5"
       >
-        <li class="nav-item">
-          <a href="" class="nav-link active">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#benefits" class="nav-link">Beneficios</a>
-        </li>
-        <li class="nav-item">
-          <a href="#aboutUs" class="nav-link">Acerca de nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a href="#mision" class="nav-link">Misión</a>
-        </li>
-        <li class="nav-item">
-          <a href="#vision" class="nav-link">Visión</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contactBanner" class="nav-link">Contactanos</a>
+        <router-link v-slot="{ href, navigate, isExactActive }" to="/" custom>
+          <li class="nav-item">
+            <a
+              :href="href"
+              class="nav-link"
+              :class="{ active: $route.hash === '' && isExactActive }"
+              @click.prevent="navigate()"
+              >Inicio</a
+            >
+          </li>
+        </router-link>
+        <router-link v-slot="{ href, navigate }" to="/#aboutUs" custom>
+          <li class="nav-item">
+            {{}}
+            <a
+              :href="href"
+              class="nav-link"
+              :class="{ active: $route.hash === '#aboutUs' }"
+              @click.prevent="navigate()"
+              >Acerca de nosotros</a
+            >
+          </li>
+        </router-link>
+        <router-link v-slot="{ href, navigate, isExactActive }" to="/productos" custom>
+          <li class="nav-item">
+            <a
+              :href="href"
+              class="nav-link"
+              :class="{ active: isExactActive }"
+              @click.prevent="navigate()"
+              >Productos</a
+            >
+          </li>
+        </router-link>
+        <router-link v-slot="{ href, navigate, isExactActive }" to="/blank" custom>
+          <li class="nav-item">
+            <a
+              :href="href"
+              class="nav-link"
+              :class="{ active: isExactActive }"
+              @click.prevent="navigate()"
+              >Blank</a
+            >
+          </li>
+        </router-link>
+        <router-link v-slot="{ href, navigate, isExactActive }" to="/contactanos" custom>
+          <li class="nav-item">
+            <a
+              :href="href"
+              class="nav-link"
+              :class="{ active: isExactActive }"
+              @click.prevent="navigate()"
+              >Contactanos</a
+            >
+          </li>
+        </router-link>
+        <li class="nav-item lg:hidden">
+          <a href="#" class="nav-link">Iniciar sesión</a>
         </li>
         <li class="nav-item mt-3.5 lg:hidden">
           <a class="btn btn-white btn-sm border-border" href="#">Regístrate</a>
         </li>
       </ul>
-      <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex">
+      <div class="order-1 ml-auto mr-3 hidden items-center md:order-2 md:ml-0 lg:flex">
+        <a class="text-slate-800" href="#">Iniciar sesión</a>
+      </div>
+      <div class="order-2 ml-auto hidden items-center md:order-3 md:ml-0 lg:flex">
         <a class="btn btn-white btn-sm" href="#">Regístrate</a>
       </div>
     </nav>
@@ -72,13 +118,13 @@ export default {
   components: {},
   props: {},
   data() {
-    return {}
+    return {};
   },
   computed: {},
   watch: {},
   mounted() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped></style>
